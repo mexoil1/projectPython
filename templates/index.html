@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Главная страница</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'img/logo.jpeg' %}" alt="Bootstrap" width="90" height="72">
+        </a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teamlead:index' %}">Главная страница</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teamlead:demand' %}">Востребованность</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teamlead:geography' %}">География</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teamlead:skills' %}">Навыки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'teamlead:latest_vacancies' %}">Последние вакансии</a>
+            </li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 style="padding-top: 25px; padding-bottom: 10px">Руководитель IT проектов</h1>
+        <p style="padding-bottom: 50px">
+          Руководитель ИТ-проектов – сотрудник, целью которого является сопровождение конкретного 
+          проекта от планирования до реализации. Критерием успеха здесь является соответствие результата
+          поставленным задачам.
+        </p>
+      </div>
+      <img src="{% static 'img/caurusel-1.jpeg' %}" class="d-block w-100" alt="...">
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px">
+        <p>
+          Суть проекта может заключаться в разработке новой информационной системы или во внедрении уже 
+          существующей системы в компании. В один период времени руководитель ИТ-проектов может заниматься 
+          одним крупным проектом или несколькими небольшими. В любом случае его труд является разносторонним, 
+          ему приходится все время переключаться с одной задачи на другую и одновременно удерживать перед 
+          глазами общую картину.
+        </p>
+      </div>
+      <img src="{% static 'img/caurusel-2.jpeg' %}" class="d-block w-100" alt="...">
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px">
+        <p>
+          Руководитель проектов в сфере ИТ должен быть знаком с основами системного анализа, разбираться в 
+          современном программном обеспечении и информационных системах, знать основы бюджетирования и уметь 
+          руководить людьми. Он должен свободно ориентироваться в стандартах и лучших практиках по управлению 
+          проектами. Руководитель ИТ-проектов должен понимать суть бизнес-процессов компаний, в которых 
+          внедряется информационная система.
+        </p>
+      </div>
+      <img src="{% static 'img/caurusel-3.jpeg' %}" class="d-block w-100" alt="...">
+      <div class="container" style="padding-top: 100px; padding-bottom: 100px">
+        <p>
+          Этот сотрудник обычно имеет высшее образование в сфере информационных технологий, а также проходит 
+          курсы повышения квалификации в области проектного менеджмента. Дорасти до этой должности можно, постепенно 
+          продвигаясь по карьерной лестнице в IT-отделе одной организации.
+        </p>
+        <p>
+          Чтобы занять этот пост с нуля, обычно требуется опыт работы на аналогичной позиции. Причем нового работодателя 
+          будет интересовать не только формальный стаж работы, но и примеры успешно реализованных задач. Свои успехи лучше 
+          заранее описать в резюме.
+        </p>
+      </div>
+
+    </main>
+    <footer class="border-top text-center py-3 bg-dark">
+        <p class ="text-white-50">Слукин Михаил Сергеевич РИ-210910</p>
+    </footer> 
+</body>
+</html>
