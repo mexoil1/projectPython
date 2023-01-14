@@ -13,9 +13,14 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 SECRET_KEY = 'django-insecure-tb)y^%ouumlnhu%1f&5mohjm92of^$^6ncb7!bhxm3*+r9ag62'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'www.mexoil.pythonanywhere.com',
+    'mexoil.pythonanywhere.com',
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

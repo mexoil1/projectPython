@@ -1,12 +1,6 @@
 from django.db import models
 
 class indexPage(models.Model):
-    logo = models.ImageField(
-        'Логотип',
-        upload_to='header/',
-        blank=True
-        )
-    nameSite = models.TextField('Название сайта')
     name = models.TextField('Заголовок')
     text1 = models.TextField("Первый абзац")
     image1 = models.ImageField(
@@ -30,42 +24,18 @@ class indexPage(models.Model):
     
     
 class demandAd(models.Model):
-    logo = models.ImageField(
-        'Логотип',
-        upload_to='header/',
-        blank=True
-        )
-    nameSite = models.TextField('Название сайта')
     name = models.TextField('Заголовок')
     
     
 class geographyAd(models.Model):
-    logo = models.ImageField(
-        'Логотип',
-        upload_to='header/',
-        blank=True
-        )
-    nameSite = models.TextField('Название сайта')
     name = models.TextField('Заголовок')
     
     
 class skillsAd(models.Model):
-    logo = models.ImageField(
-        'Логотип',
-        upload_to='header/',
-        blank=True
-        )
-    nameSite = models.TextField('Название сайта')
     name = models.TextField('Заголовок')
     
     
 class latestAd(models.Model):
-    logo = models.ImageField(
-        'Логотип',
-        upload_to='header/',
-        blank=True
-        )
-    nameSite = models.TextField('Название сайта')
     name = models.TextField('Заголовок')
     
     
