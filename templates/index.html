@@ -9,80 +9,105 @@
     <title>Главная страница</title>
 </head>
 <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
-          <img src="{% static 'img/logo.jpeg' %}" alt="Bootstrap" width="90" height="72">
-        </a>
       
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'teamlead:index' %}">Главная страница</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'teamlead:demand' %}">Востребованность</a>
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'teamlead:geography' %}">География</a>
+              <a class="nav-link disabled" href="#">Disabled</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'teamlead:skills' %}">Навыки</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'teamlead:latest_vacancies' %}">Последние вакансии</a>
-            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  <div style="display: flex">
+    <div class="bg-dark">
+      <sidebar>
+        <nav class="sidebar-sticky navbar-expand-md navbar-dark bg-dark text-center">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto flex-column">
+              <li class="nav-item active">
+                <a href="" class="nav-link">Главная страница</a>
+                <hr style="color:white">
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Востребованность</a>
+                <hr style="color:white">
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">География</a>
+                <hr style="color:white">
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Навыки</a>
+                <hr style="color:white">
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Последние вакансии</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </sidebar>
+    </div>
     <main>
       <div class="container">
         <h1 style="padding-top: 25px; padding-bottom: 10px">Руководитель IT проектов</h1>
         <p style="padding-bottom: 50px">
-          Руководитель ИТ-проектов – сотрудник, целью которого является сопровождение конкретного 
-          проекта от планирования до реализации. Критерием успеха здесь является соответствие результата
-          поставленным задачам.
+          {{pageObj.text1}}
         </p>
       </div>
-      <img src="{% static 'img/caurusel-1.jpeg' %}" class="d-block w-100" alt="...">
+      <img src="{{pageObj.image1.url}}" class="d-block w-100" alt="...">
       <div class="container" style="padding-top: 100px; padding-bottom: 100px">
         <p>
-          Суть проекта может заключаться в разработке новой информационной системы или во внедрении уже 
-          существующей системы в компании. В один период времени руководитель ИТ-проектов может заниматься 
-          одним крупным проектом или несколькими небольшими. В любом случае его труд является разносторонним, 
-          ему приходится все время переключаться с одной задачи на другую и одновременно удерживать перед 
-          глазами общую картину.
+          {{pageObj.text2}}
         </p>
       </div>
-      <img src="{% static 'img/caurusel-2.jpeg' %}" class="d-block w-100" alt="...">
+      <img src="{{pageObj.image2.url}}" class="d-block w-100" alt="...">
       <div class="container" style="padding-top: 100px; padding-bottom: 100px">
         <p>
-          Руководитель проектов в сфере ИТ должен быть знаком с основами системного анализа, разбираться в 
-          современном программном обеспечении и информационных системах, знать основы бюджетирования и уметь 
-          руководить людьми. Он должен свободно ориентироваться в стандартах и лучших практиках по управлению 
-          проектами. Руководитель ИТ-проектов должен понимать суть бизнес-процессов компаний, в которых 
-          внедряется информационная система.
+          {{pageObj.text3}}
         </p>
       </div>
-      <img src="{% static 'img/caurusel-3.jpeg' %}" class="d-block w-100" alt="...">
+      <img src="{{pageObj.image3.url}}" class="d-block w-100" alt="...">
       <div class="container" style="padding-top: 100px; padding-bottom: 100px">
         <p>
-          Этот сотрудник обычно имеет высшее образование в сфере информационных технологий, а также проходит 
-          курсы повышения квалификации в области проектного менеджмента. Дорасти до этой должности можно, постепенно 
-          продвигаясь по карьерной лестнице в IT-отделе одной организации.
-        </p>
-        <p>
-          Чтобы занять этот пост с нуля, обычно требуется опыт работы на аналогичной позиции. Причем нового работодателя 
-          будет интересовать не только формальный стаж работы, но и примеры успешно реализованных задач. Свои успехи лучше 
-          заранее описать в резюме.
+          {{pageObj.text4}}
         </p>
       </div>
 
     </main>
-    <footer class="border-top text-center py-3 bg-dark">
+  </div>
+    <footer class=" text-center py-3 bg-dark">
         <p class ="text-white-50">Слукин Михаил Сергеевич РИ-210910</p>
     </footer> 
 </body>

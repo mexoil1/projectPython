@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from .models import indexPage
 
 def index(request):
     template = 'index.html'
+    pageObj = indexPage.objects.first()
     context = {
-
+        'pageObj': pageObj
     }
     return render(request, template, context)
 
