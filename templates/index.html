@@ -1,87 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>Главная страница</title>
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div style="display: flex">
-    <div class="bg-dark">
-      <sidebar>
-        <nav class="sidebar-sticky navbar-expand-md navbar-dark bg-dark text-center">
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto flex-column">
-              <li class="nav-item active">
-                <a href="" class="nav-link">Главная страница</a>
-                <hr style="color:white">
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Востребованность</a>
-                <hr style="color:white">
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">География</a>
-                <hr style="color:white">
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Навыки</a>
-                <hr style="color:white">
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Последние вакансии</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </sidebar>
-    </div>
+  {% include 'includes/headerSidebar.html'%}
     <main>
       <div class="container">
-        <h1 style="padding-top: 25px; padding-bottom: 10px">Руководитель IT проектов</h1>
+        <h1 style="padding-top: 25px; padding-bottom: 10px">Главная страница</h1>
         <p style="padding-bottom: 50px">
           {{pageObj.text1}}
         </p>
@@ -107,8 +28,6 @@
 
     </main>
   </div>
-    <footer class=" text-center py-3 bg-dark">
-        <p class ="text-white-50">Слукин Михаил Сергеевич РИ-210910</p>
-    </footer> 
+    {% include 'includes/footer.html'%}
 </body>
 </html>
